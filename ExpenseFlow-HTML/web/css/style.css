@@ -1,0 +1,373 @@
+/* ============================================================
+   ExpenseFlow — shared stylesheet  (v2 — "dashing" edition)
+   Rendered by Java's built-in HTMLEditorKit (CSS 2.1 subset).
+   No border-radius / shadow / gradient / flexbox exist here —
+   but groove/ridge/double/outset borders, individual border
+   render, and that's what gives this its depth and polish.
+   ============================================================ */
+
+body {
+    background-color: #080B14;
+    color: #F4F6FB;
+    font-family: SansSerif;
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+h2 {
+    color: #E7E9F3;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 14px;
+}
+
+/* div-based section heading: h2 silently ignores text-transform/letter-spacing
+   in this renderer, so real section labels use this class on a <div> instead,
+   with the text already written in UPPERCASE in the HTML. */
+.sectionhead {
+    color: #E7E9F3;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+p.subtitle {
+    color: #6B7694;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 18px;
+}
+
+/* ---------- layout shell ---------- */
+table.page {
+    width: 100%;
+    border: 0px;
+    cellspacing: 0px;
+}
+
+td.content {
+    padding: 30px 34px 30px 34px;
+    vertical-align: top;
+    background-color: #0B0F1C;
+}
+
+/* ---------- cards : groove border = real dimensional edge ---------- */
+table.card {
+    background-color: #11162A;
+    border: 2px groove #2B355A;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+td.card-pad {
+    padding: 20px 22px 22px 22px;
+}
+
+table.statcard {
+    background-color: #11162A;
+    border: 2px groove #2B355A;
+    width: 100%;
+}
+
+td.stat-strip {
+    background-color: #8B5CF6;
+    width: 5px;
+}
+
+td.stat-strip-green  { background-color: #18D89B; }
+td.stat-strip-red    { background-color: #FF5D6C; }
+td.stat-strip-blue   { background-color: #4F9CFF; }
+td.stat-strip-orange { background-color: #FFB23E; }
+td.stat-strip-purple { background-color: #B69CFF; }
+
+td.stat-body {
+    padding: 17px 18px 16px 20px;
+}
+
+.stat-label {
+    color: #7782A6;
+    font-size: 10px;
+}
+
+.stat-value {
+    color: #FFFFFF;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: Serif;
+}
+
+.stat-sub {
+    font-size: 11px;
+}
+
+.sub-green  { color: #18D89B; }
+.sub-red    { color: #FF5D6C; }
+.sub-blue   { color: #4F9CFF; }
+.sub-orange { color: #FFB23E; }
+.sub-purple { color: #B69CFF; }
+
+/* ---------- buttons : outset/ridge give real button depth ---------- */
+a.btn {
+    background-color: #7C3AED;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 9px 18px 9px 18px;
+    border: 2px outset #9D6BFF;
+}
+
+a.btn-ghost {
+    background-color: #11162A;
+    color: #B69CFF;
+    text-decoration: none;
+    padding: 7px 15px 7px 15px;
+    border: 1px solid #5B4B9E;
+}
+
+a.btn-danger {
+    background-color: #240E12;
+    color: #FF5D6C;
+    text-decoration: none;
+    padding: 4px 11px 4px 11px;
+    border: 1px solid #7A2530;
+}
+
+a.btn-info {
+    background-color: #0E1C2E;
+    color: #4F9CFF;
+    text-decoration: none;
+    padding: 4px 11px 4px 11px;
+    border: 1px solid #1F4A77;
+}
+
+a.btn-small {
+    font-size: 11px;
+}
+
+/* ---------- sidebar ---------- */
+table.sidebar {
+    background-color: #060912;
+    width: 230px;
+    height: 100%;
+    border-right: 2px solid #1B2240;
+}
+
+td.sidebar-pad {
+    padding: 28px 18px 16px 18px;
+    vertical-align: top;
+}
+
+.brand {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.brand-rule {
+    border-top: 1px dotted #2B355A;
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+
+a.navitem {
+    display: block;
+    color: #7782A6;
+    text-decoration: none;
+    padding: 12px 14px 12px 14px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    border-left: 3px solid #060912;
+}
+
+a.navitem-active {
+    display: block;
+    background-color: #161D38;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 14px 12px 14px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    border-left: 3px solid #8B5CF6;
+}
+
+.footer-text {
+    color: #424B6E;
+    font-size: 10px;
+}
+
+.footer-rule {
+    border-top: 1px dotted #1B2240;
+    margin-bottom: 10px;
+}
+
+/* ---------- table rows / lists ---------- */
+table.rowlist {
+    width: 100%;
+    border: 0px;
+}
+
+tr.expense-row td {
+    padding: 12px 6px 12px 6px;
+    border-bottom: 1px dotted #232C4D;
+}
+
+.row-title {
+    color: #F4F6FB;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.row-meta {
+    color: #7782A6;
+    font-size: 11px;
+}
+
+.row-amount {
+    color: #FF7A86;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Serif;
+}
+
+.row-note {
+    color: #8A93B8;
+    font-size: 11px;
+}
+
+/* ---------- category dot substitute (colored cell) ---------- */
+td.dot {
+    width: 14px;
+    height: 14px;
+    font-size: 1px;
+    border: 1px solid #080B14;
+}
+
+.dot-food        { background-color: #FF5D6C; }
+.dot-transport   { background-color: #4F9CFF; }
+.dot-shopping    { background-color: #FFB23E; }
+.dot-entertain   { background-color: #F472B6; }
+.dot-health      { background-color: #18D89B; }
+.dot-housing     { background-color: #9D6BFF; }
+.dot-utilities   { background-color: #22D3EE; }
+.dot-education   { background-color: #FB923C; }
+.dot-travel      { background-color: #2DD4BF; }
+.dot-personal    { background-color: #C084FC; }
+.dot-gifts       { background-color: #A3E635; }
+.dot-other       { background-color: #7782A6; }
+
+/* ---------- progress bar substitute (nested table) ---------- */
+table.barbg {
+    background-color: #1B2240;
+    width: 100%;
+    height: 10px;
+    border: 1px solid #0B0F1C;
+}
+
+td.barfill {
+    background-color: #8B5CF6;
+    height: 8px;
+    font-size: 1px;
+    border-right: 2px solid #C4AFFF;
+}
+
+td.barfilldanger {
+    background-color: #FF5D6C;
+    border-right: 2px solid #FFB0B6;
+}
+
+/* ---------- bar chart (table-based columns) ---------- */
+table.chart {
+    width: 100%;
+    height: 200px;
+}
+
+td.chart-col {
+    vertical-align: bottom;
+    text-align: center;
+    width: 16%;
+    border-bottom: 2px solid #2B355A;
+}
+
+td.chart-bar {
+    background-color: #8B5CF6;
+    border-top: 2px solid #C4AFFF;
+}
+
+.chart-label {
+    color: #7782A6;
+    font-size: 10px;
+}
+
+.chart-value {
+    color: #B0B8D8;
+    font-size: 10px;
+    font-family: Serif;
+}
+
+/* ---------- form ---------- */
+.field-label {
+    color: #7782A6;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.field-value {
+    background-color: #0E1226;
+    color: #F4F6FB;
+    border: 1px solid #2B355A;
+    border-left: 3px solid #8B5CF6;
+    padding: 10px 13px 10px 13px;
+    font-size: 13px;
+}
+
+.error-text {
+    color: #FF5D6C;
+    font-size: 12px;
+}
+
+.empty-text {
+    color: #565F82;
+    font-size: 13px;
+}
+
+.month-header {
+    color: #565F82;
+    font-size: 11px;
+    font-weight: bold;
+    border-bottom: 1px solid #1B2240;
+}
+
+hr.sep {
+    color: #1B2240;
+    background-color: #1B2240;
+    height: 1px;
+    border: 0px;
+}
+
+/* ---------- section heading rule (used under page <h1>) ---------- */
+.title-rule {
+    border-top: 1px solid #8B5CF6;
+    border-bottom: 1px solid #1B2240;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+/* ---------- ledger-style table header bar ---------- */
+td.ledger-head {
+    background-color: #161D38;
+    border-bottom: 2px solid #8B5CF6;
+    color: #7782A6;
+    font-size: 10px;
+    padding: 10px 6px 10px 6px;
+}

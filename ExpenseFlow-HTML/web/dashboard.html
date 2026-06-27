@@ -1,0 +1,123 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="STYLE_CSS_PATH">
+</head>
+<body>
+<table class="page" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="sidebar-pad" valign="top">
+SIDEBAR_PLACEHOLDER
+</td>
+<td class="content" valign="top">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td valign="top">
+<h1>Dashboard</h1>
+<p class="subtitle">DATE_TODAY</p>
+</td>
+<td align="right" valign="top">
+<a class="btn" href="app://nav?to=add">+ Add Expense</a>
+</td>
+</tr>
+</table>
+<div class="title-rule"></div>
+
+<br>
+
+<!-- Stat cards row -->
+<table width="100%" cellpadding="6" cellspacing="0" border="0">
+<tr>
+<td width="25%">
+<table class="statcard" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="stat-strip"></td>
+<td class="stat-body">
+<div class="stat-label">This Month</div>
+<div class="stat-value">STAT_THIS_MONTH</div>
+<div class="stat-sub sub-red">STAT_MONTH_DIFF</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="25%">
+<table class="statcard" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="stat-strip stat-strip-blue"></td>
+<td class="stat-body">
+<div class="stat-label">Today</div>
+<div class="stat-value">STAT_TODAY</div>
+<div class="stat-sub sub-blue">spent today</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="25%">
+<table class="statcard" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="stat-strip stat-strip-orange"></td>
+<td class="stat-body">
+<div class="stat-label">Daily Average</div>
+<div class="stat-value">STAT_DAILY_AVG</div>
+<div class="stat-sub sub-orange">avg per day this month</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="25%">
+<table class="statcard" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td class="stat-strip stat-strip-purple"></td>
+<td class="stat-body">
+<div class="stat-label">Largest This Month</div>
+<div class="stat-value">STAT_LARGEST</div>
+<div class="stat-sub sub-purple">STAT_LARGEST_TITLE</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- Chart + category breakdown -->
+<table width="100%" cellpadding="6" cellspacing="0" border="0">
+<tr>
+<td width="50%" valign="top">
+<table class="card" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="card-pad">
+<div class="sectionhead">MONTHLY SPENDING - LAST 6 MONTHS</div>
+CHART_TABLE_PLACEHOLDER
+</td></tr>
+</table>
+</td>
+<td width="50%" valign="top">
+<table class="card" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="card-pad">
+<div class="sectionhead">TOP CATEGORIES THIS MONTH</div>
+CATEGORY_BREAKDOWN_PLACEHOLDER
+</td></tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!-- Recent expenses -->
+<table class="card" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td class="card-pad">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td><div class="sectionhead">RECENT EXPENSES</div></td>
+<td align="right"><a class="btn-ghost btn-small" href="app://nav?to=history">View All &#8594;</a></td>
+</tr>
+</table>
+RECENT_EXPENSES_PLACEHOLDER
+</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+</body>
+</html>
